@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
     <link rel="icon" type="image/png" sizes="96×96" href="./favicon.ico" />
 
     <title>MyScript Unified Sample</title>
@@ -38,8 +40,8 @@
     <custom-style>
       <style>
         html {
-          --paper-fab-background: #1a9fff;
-          --paper-fab-keyboard-focus-background: #1a9fff;
+          --paper-fab-background: rgb(216,58,66);
+          --paper-fab-keyboard-focus-background: rgb(216,58,66);
           --paper-fab-disabled-background: #d7dadc;
         }
 
@@ -138,7 +140,7 @@
     <!-- <button style="float: right" id="customButton">Submit</button> -->
     
     <header>      
-            <paper-button style="float: right" id="customButton" toggles>Submit</paper-button>
+            <paper-button style="float: right" id="customButton" type="button" class="btn btn-danger" toggles>Submit</paper-button>
     </header>
     <div id="content">
       <div class="write-here-wrapper">
