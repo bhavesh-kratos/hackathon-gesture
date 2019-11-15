@@ -61,12 +61,8 @@
         }
 
         header {
-          height: 49px;
-          border-bottom: 1px solid #dddddd;
-          display: -webkit-flex;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          height: 49px;          
+          display: -webkit-box;          
         }
 
         .write-here-wrapper {
@@ -126,22 +122,16 @@
           background-color: rgb(216,58,66);
           margin-right: 0.67em;
         }
+        
       </style>
     </custom-style>
   </head>
 
-  <body touch-action="none">
-      <div id='bp'>
-
-      </div>
+  <body touch-action="none">      
     <div class="hidden warningkeys">
       Please set applicationkey and hmackey as described in README.md
     </div>
     <!-- <button style="float: right" id="customButton">Submit</button> -->
-    
-    <header>      
-            <paper-button style="float: right" id="customButton" type="button" class="btn btn-danger" toggles>Submit</paper-button>
-    </header>
     <div id="content">
       <div class="write-here-wrapper">
         <div class="write-here hidden"></div>
@@ -152,7 +142,10 @@
           applicationkey="542817d3-2614-4e1c-84ce-bb0c2eae6a6a"
           hmackey="a8a5924e-cfe1-4785-a21e-d864db3bd10e"
           unloaded
-        ></myscript-text-web>
+        ></myscript-text-web>            
+        <header>      
+            <paper-button style="position:absolute; right:5px; bottom: 10px;" id="customButton" toggles>Submit</paper-button>        
+        </header>
         <!-- <myscript-math-web id="mathInput" class="hidden" host="webdemoapi.myscript.com"
                            applicationkey="542817d3-2614-4e1c-84ce-bb0c2eae6a6a"
                            hmackey="a8a5924e-cfe1-4785-a21e-d864db3bd10e" unloaded></myscript-math-web> -->

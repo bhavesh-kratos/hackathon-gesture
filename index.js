@@ -3,14 +3,21 @@
 
   function $(selector) {
     return document.querySelector(selector);
-  }  
+  }
 
   window.addEventListener("WebComponentsReady", function() {
     var textInput = $("#textInput");
-    var submitButton = $("#customButton");    
+    var submitButton = $("#customButton");
     // var textButton = $('#textButton');
     // var mathButton = $('#mathButton');
-    var writeHere = $(".write-here");
+    var writeHere = $(".write-here");    
+     
+    // if (
+    //   $("#textInput") &&
+    //   $("#textInput")
+    //     .shadowRoot.querySelector("[apiversion]")
+    //     .shadowRoot.querySelector("svg[data-layer]")
+    // )
 
     if (
       textInput.applicationkey === "REPLACE_ME" ||
@@ -73,32 +80,31 @@
         var gestureValue = $("#textInput")
           .shadowRoot.querySelector("[apiversion]")
           .shadowRoot.querySelector(".prompter-text").textContent;
-          console.log("gesture data", gestureValue);
-          if(gestureValue){
-            window.postMessage(gestureValue);
-          }
-          else{
-              console.log('No value');
-          }
+        console.log("gesture data", gestureValue);
+        if (gestureValue) {
+          window.postMessage(gestureValue);
+        } else {
+          console.log("No value");
+        }
         // return
       }
 
-    //   submitButton.addEventListener("click", function() {
-        
-    //     readGestureData();
-    //     // window.postMessage()
-    //   });
+      //   submitButton.addEventListener("click", function() {
 
-      submitButton.addEventListener("tap", function() {        
+      //     readGestureData();
+      //     // window.postMessage()
+      //   });
+
+      submitButton.addEventListener("tap", function() {
         readGestureData();
         // window.postMessage()
       });
-      
-    //   submitButton.onclick = () => {
-    //       console.log('heree')
-    //     readGestureData();
-    //     // window.postMessage()
-    //   };
+
+      //   submitButton.onclick = () => {
+      //       console.log('heree')
+      //     readGestureData();
+      //     // window.postMessage()
+      //   };
       // Initialize the default demo
       setButtonsStates(true, false);
     }
